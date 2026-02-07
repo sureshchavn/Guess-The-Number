@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /*horizontal center*/
+    align-items: center; /*Vertical center*/
+}
+
+.game-container{
+    max-width: 400px;
+    margin: 40px, auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+#game-description{
+    color:#555;
+    margin-bottom: 20px;
+}
+
+.difficulty{
+    margin-bottom: 15px;
+}
+
+.input-section{
+    display: flex;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+input[type="number"]{
+    flex: 1;
+    padding: 8px;
+    font-size: 13px;
+}
+
+button{
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c8ffb;
+    color: white;
+}
+
+button:hover{
+    background-color: green;
+}
+
+.message{
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.message.correct{
+    color:green;
+}
+
+.message.wrong{
+    color:red;
+}
+
+.stats{
+    font-size: 13px;
+    margin-top: 10px;
+    color: #444;
+}
+
+.restartBtn{
+    margin-top: 15px;
+    width: 100%;
+    background-color: #666;
+}
+
+@media(max-width:450px){
+    .game-container{
+        margin: 20px;
+    }
+}
