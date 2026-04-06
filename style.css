@@ -1,95 +1,156 @@
-*{
+/* Reset */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
     min-height: 100vh;
     display: flex;
-    justify-content: center; /*horizontal center*/
-    align-items: center; /*Vertical center*/
+    justify-content: center;
+    align-items: center;
 }
 
-.game-container{
+/* Main Container */
+.game-container {
+    width: 100%;
     max-width: 400px;
-    margin: 40px, auto;
-    background: white;
+    margin: 40px auto; /* FIXED (comma removed) */
+    background: #ffffff;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: 0.3s ease;
 }
 
-h1{
+.game-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+h1 {
     margin-bottom: 10px;
+    color: #333;
 }
 
-#game-description{
-    color:#555;
+/* Description */
+#game-description {
+    color: #666;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
-.difficulty{
+/* Difficulty Section */
+.difficulty {
     margin-bottom: 15px;
 }
 
-.input-section{
+/* Input Section */
+.input-section {
     display: flex;
-    gap: 8px;
-    font-size: 15px;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
-input[type="number"]{
+/* Input Box */
+input[type="number"] {
     flex: 1;
-    padding: 8px;
-    font-size: 13px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
 }
 
-button{
-    padding: 8px 12px;
-    font-size: 13px;
+input[type="number"]:focus {
+    border-color: #4c8ffb;
+    box-shadow: 0 0 5px rgba(76, 143, 251, 0.5);
+}
+
+/* Buttons */
+button {
+    padding: 10px 14px;
+    font-size: 14px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #4c8ffb;
     color: white;
+    transition: 0.3s;
 }
 
-button:hover{
-    background-color: green;
+button:hover {
+    background-color: #2e6df6;
+    transform: scale(1.05);
 }
 
-.message{
+/* Message */
+.message {
     font-weight: bold;
     margin: 12px 0;
+    font-size: 15px;
 }
 
-.message.correct{
-    color:green;
+.message.correct {
+    color: green;
 }
 
-.message.wrong{
-    color:red;
+.message.wrong {
+    color: red;
 }
 
-.stats{
-    font-size: 13px;
+/* Stats Section */
+.stats {
+    font-size: 14px;
     margin-top: 10px;
     color: #444;
+    line-height: 1.6;
 }
 
-.restartBtn{
+/* Restart Button */
+.restartBtn {
     margin-top: 15px;
     width: 100%;
-    background-color: #666;
+    background-color: #6c63ff;
 }
 
-@media(max-width:450px){
-    .game-container{
+.restartBtn:hover {
+    background-color: #5548d9;
+}
+
+/* Select Dropdown */
+select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:hover {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    .game-container {
         margin: 20px;
+        padding: 20px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
     }
 }
